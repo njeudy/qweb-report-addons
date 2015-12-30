@@ -2,7 +2,7 @@
 host = https://www.transifex.com
 type = PO
 
-[qweb-report-addons.report_ng]
+[qweb-report-addons-90.report_ng]
 file_filter = report_ng/i18n/<lang>.po
 source_file = report_ng/i18n/reportng.pot
 source_lang = en

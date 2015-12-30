@@ -1,17 +1,17 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * report_ng
-#
+# 
 # Translators:
 # Nicolas JEUDY <nicolas@sudokeys.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: qweb-report-addons\n"
+"Project-Id-Version: qweb-report-addons (9.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-22 09:17+0000\n"
-"PO-Revision-Date: 2015-10-22 10:04+0000\n"
+"PO-Revision-Date: 2015-12-30 16:18+0000\n"
 "Last-Translator: Nicolas JEUDY <nicolas@sudokeys.com>\n"
-"Language-Team: French (http://www.transifex.com/sudokeys/qweb-report-addons/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/njeudy/qweb-report-addons-90/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -21,27 +21,27 @@ msgstr ""
 #. module: report_ng
 #: view:website:report_ng.footer_format_01
 msgid "- Fax :"
-msgstr "- Fax"
+msgstr "- Fax :"
 
 #. module: report_ng
 #: view:website:report_ng.footer_format_01
 msgid "Addresse:"
-msgstr "Adresse de correspondance: "
+msgstr "Adresse:"
 
 #. module: report_ng
 #: view:website:report_ng.bank_format_01
 msgid "BIC:"
-msgstr "BIC: "
+msgstr "BIC:"
 
 #. module: report_ng
 #: view:website:report_ng.bank_format_01
 msgid "Bank account Owner:"
-msgstr "Coordonnées Bancaires: "
+msgstr "Propriétaire du compte"
 
 #. module: report_ng
 #: view:website:report_ng.bank_format_01
 msgid "Bank:"
-msgstr "Banque: "
+msgstr "Banque:"
 
 #. module: report_ng
 #: field:res.company,color:0
@@ -51,32 +51,32 @@ msgstr "Couleur"
 #. module: report_ng
 #: model:ir.model,name:report_ng.model_res_company
 msgid "Companies"
-msgstr "Sociétés"
+msgstr "Société"
 
 #. module: report_ng
 #: view:website:report_ng.bank_format_01
 msgid "IBAN:"
-msgstr "IBAN: "
+msgstr "IBAN;"
 
-#. module:report_ng
+#. module: report_ng
 #: view:website:report_ng.bank_format_01
 msgid "Legal mentions"
-msgstr "Tout retard de paiement entraîne l’application d’une pénalité égale à 2 fois le taux de l’intérêt légal en vigueur et d’une indemnité forfaitaire de frais de recouvrement de 40 €."
+msgstr "Mentions Légales"
 
 #. module: report_ng
 #: view:website:report_ng.bank_format_01
 msgid "Name:"
-msgstr "Domiciliation: "
+msgstr "Nom:"
 
 #. module: report_ng
 #: view:website:report_ng.footer_format_01
 msgid "Page:"
-msgstr "Page: "
+msgstr "Page:"
 
 #. module: report_ng
 #: view:website:report_ng.footer_format_01
 msgid "Phone :"
-msgstr "Tel. : "
+msgstr "Tél.:"
 
 #. module: report_ng
 #: model:ir.model,name:report_ng.model_report
