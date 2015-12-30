@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="address_format_01" name="Address format 01">
+            <strong><span t-field="partner.name"/></strong>
+            <br/>
+            <t t-if="partner.street">
+                <span style="text-transform:uppercase;" t-field="partner.street"/>
+                <br/>
+            </t>
+            <t t-if="partner.street2">
+                <span style="text-transform:uppercase;" t-field="partner.street2"/>
+                <br/>
+            </t>
+
+            <t t-if="partner.zip or partner.city or partner.cedex">
+                <span t-field="partner.zip"/>
+                <span></span>
+                <span style="text-transform:uppercase;" t-field="partner.city"/>
+            </t>
+            <span t-field="partner.vat"/>
+        </template>
+
+        <template id="bank_format_01" name="Bank format 01">
+            <div t-if="bank_id" class="row" style="background-color: #eee; border-left: 1px solid #444;">
+                <div class="col-xs-6">
+                    <h3>Bank: </h3>
+                    <p><strong>Bank account Owner: </strong><span t-field="company.name"/></p>
+                    <p t-if="bank_id.bank_name"><strong>Name: </strong><span t-field="bank_id.bank_name"/></p>
+                    <p t-if="bank_id.acc_number"><strong>IBAN: </strong><span t-field="bank_id.acc_number"/></p>
+                    <p t-if="bank_id.bank_bic"><strong>BIC: </strong><span t-field="bank_id.bank_bic"/></p>
+                </div>
+                <div class="col-xs-6">
+                    <h3></h3>
+                    <p style="text-align: justify;">Legal mentions</p>
+                </div>
+            </div>
+        </template>
+
+    </data>
+</openerp>

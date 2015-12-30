@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="ir_ui_view_theme_report_ng_r0" model="ir.ui.view.theme">
+            <field name="description">Report NG Base Theme</field>
+            <field name="name">Report NG base</field>
+        </record>
+
+        <record id="view_view_form_inherit_report_ng" model="ir.ui.view">
+            <field name="name">ir.ui.view form inherit report_ng</field>
+            <field name="model">ir.ui.view</field>
+            <field name="inherit_id" ref="base.view_view_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="view_theme_id"/>
+                    <field name="company_ids" widget="many2many_tags"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_view_search_inherit_report_ng" model="ir.ui.view">
+            <field name="name">ir.ui.view search inherit report_ng</field>
+            <field name="model">ir.ui.view</field>
+            <field name="inherit_id" ref="base.view_view_search"/>
+            <field name="arch" type="xml">
+                <field name="type" position="after">
+                    <field name="view_theme_id"/>
+                    <field name="company_ids"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_view_tree_inherit_report_ng" model="ir.ui.view">
+            <field name="name">ir.ui.view tree inherit report_ng</field>
+            <field name="model">ir.ui.view</field>
+            <field name="inherit_id" ref="base.view_view_tree"/>
+            <field name="arch" type="xml">
+                <field name="model" position="after">
+                    <field name="view_theme_id"/>
+                    <field name="company_ids" widget="many2many_tags"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

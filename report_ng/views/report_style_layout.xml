@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="assets_common" model="ir.ui.view">
+        <field name="name">Report NG CSS Style</field>
+        <field name="inherit_id" ref="report.assets_common" />
+        <field name="view_theme_id" ref="ir_ui_view_theme_report_ng_r0"/>
+        <field name="active" eval="False"/>
+        <field name="model"></field>
+        <field name="arch" type="xml">
+            <xpath expr="." position="inside">
+                <link href="/report_ng/static/src/css/main.css" rel="stylesheet"/>
+            </xpath>
+        </field>
+    </record>
+
+</data>
+</openerp>
