@@ -7,15 +7,14 @@ class ResCompany(models.Model):
 
     _inherit = 'res.company'
 
-    @api.onchange('view_theme_id')
-    def onchange_view_theme_id(self):
-        import pdb; pdb.set_trace()
+    @api.multi
+    def apply_company_qweb_theme(self, view_theme_id):
         for record in self:
-            views_to_activate = self.env['ir.ui.view'].search(['&', '&', ('view_theme_id', '=', record.view_theme_id.id),
+            views_to_activate = self.env['ir.ui.view'].search(['&', '&', ('view_theme_id', '=', view_theme_id),
                                                                          ('type', '=', 'qweb'),
                                                                     '|', ('active', '=', False),
                                                                          ('company_ids', 'not in', [self.env.user.company_id.id])])
-            views_to_desactivate = self.env['ir.ui.view'].search([('view_theme_id', 'not in', [False, record.view_theme_id.id]),
+            views_to_desactivate = self.env['ir.ui.view'].search([('view_theme_id', 'not in', [False, view_theme_id]),
                                                                   ('type', '=', 'qweb'),
                                                                   ('active', '=', True)])
             for view in views_to_activate:
@@ -29,6 +28,13 @@ class ResCompany(models.Model):
                 if not desactivated_company_ids:
                     vals.update({'active': False})
                 view.write(vals)
+            return True
+
+    @api.multi
+    def write(self, vals):
+        res = super(ResCompany, self).write(vals)
+        self.apply_company_qweb_theme(vals.get('view_theme_id', False))
+        return res
 
     color = fields.Char(string="Color", help="Choose your color")
     view_theme_id = fields.Many2one('ir.ui.view.theme', string="Theme")

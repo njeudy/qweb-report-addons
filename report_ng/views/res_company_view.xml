@@ -11,7 +11,7 @@
             <field name="arch" type="xml">
                 <field name="rml_footer_readonly" position="after">
                     <field name="color" widget="color"/>
-                    <field name="view_theme_id"/>
+                    <field name="view_theme_id" class="oe_inline"/>
                 </field>
             </field>
         </record>
